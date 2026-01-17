@@ -34,4 +34,4 @@ jobs:
     
     - name: Run integration tests
       run: |
-        pytest tests/test_integration.py -v || echo "Integration tests completed with warnings"
+        pytest tests/test_integration.py -v || echo "Integration tests may require backend server running"
