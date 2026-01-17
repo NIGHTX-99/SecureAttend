@@ -22,8 +22,11 @@ CERTS_DIR = DATA_DIR / "certs"
 CRL_DIR = DATA_DIR / "crl"
 DB_PATH = DATA_DIR / "attendance.db"
 
-# Ensure directories exist
-DATA_DIR.mkdir(parents=True, exist_ok=True)
+# Ensure directories exist (but don't fail if can't create)
+try:
+    DATA_DIR.mkdir(parents=True, exist_ok=True)
+except Exception:
+    pass  # May fail in some contexts
 
 
 @lru_cache()
