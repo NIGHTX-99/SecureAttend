@@ -21,7 +21,7 @@ This project uses the following branch structure:
 
 ```bash
 # Add remote repository
-git remote add origin https://github.com/yourusername/SecureAttend.git
+git remote add origin https://github.com/NIGHTX-99/SecureAttend.git
 
 # Push all branches
 git push -u origin main

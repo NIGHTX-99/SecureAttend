@@ -38,11 +38,19 @@ python -m backend.ca.ca_manager init
 ### Running the System
 
 ```bash
-# Start backend server
-python -m backend.api.main
+# 1. Initialize backend (CA, certificates, database)
+python scripts/init_backend.py
 
-# In another terminal, start client
+# 2. Start backend server
+python scripts/start_backend.py
+# Or: uvicorn backend.api.main:app --reload
+
+# 3. In another terminal, use client
+# Display QR code
 python -m client.ui.cli show-qr --student-id student_001
+
+# Complete authentication flow
+python -m client.ui.cli authenticate student_001 CS101 door_001
 ```
 
 ### Docker

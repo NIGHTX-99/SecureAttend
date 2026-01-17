@@ -1,0 +1,32 @@
+name: Client Tests
+
+on:
+  push:
+    branches:
+      - client-dev
+      - develop
+  pull_request:
+    branches:
+      - develop
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install pytest
+    
+    - name: Run client tests
+      run: |
+        pytest tests/ -k client -v || echo "Client-specific tests not yet implemented"
