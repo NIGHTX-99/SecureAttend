@@ -25,13 +25,19 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-        pip install pytest pytest-asyncio
-        pip install requests  # Ensure requests is available for tests
+        pip install pytest pytest-asyncio requests
+    
+    - name: Set PYTHONPATH
+      run: |
+        echo "PYTHONPATH=${{ github.workspace }}" >> $GITHUB_ENV
     
     - name: Run CA tests
+      working-directory: ${{ github.workspace }}
       run: |
+        export PYTHONPATH=${{ github.workspace }}
         python scripts/test_ca.py
     
     - name: Run integration tests
       run: |
+        cd ${{ github.workspace }}
         pytest tests/test_integration.py -v || echo "Integration tests may require backend server running"

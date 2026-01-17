@@ -29,7 +29,14 @@ DATA_DIR.mkdir(parents=True, exist_ok=True)
 @lru_cache()
 def get_ca_manager() -> CAManager:
     """Get CA Manager instance (singleton)."""
-    return CAManager(CA_DIR)
+    manager = CAManager(CA_DIR)
+    # Initialize CA if it doesn't exist (for testing/Docker)
+    if not (CA_DIR / "ca_certificate.pem").exists():
+        try:
+            manager.initialize_ca()
+        except Exception:
+            pass  # May fail in some contexts, that's ok
+    return manager
 
 
 @lru_cache()

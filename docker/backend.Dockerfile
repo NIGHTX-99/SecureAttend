@@ -21,9 +21,13 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY backend/ ./backend/
 COPY client/ ./client/
 COPY scripts/ ./scripts/
+COPY setup.py ./
 
 # Create data directory
 RUN mkdir -p /app/data
+
+# Set PYTHONPATH for proper imports
+ENV PYTHONPATH=/app
 
 # Expose port
 EXPOSE 8000
@@ -33,4 +37,4 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=10s --retries=3 \
     CMD curl -f http://localhost:8000/health || exit 1
 
 # Run backend server
-CMD ["uvicorn", "backend.api.main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["python", "-m", "uvicorn", "backend.api.main:app", "--host", "0.0.0.0", "--port", "8000"]
