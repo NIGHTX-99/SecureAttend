@@ -13,7 +13,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 import uvicorn
 
 if __name__ == "__main__":
-    print("Starting PKI-Based QR Access Control Backend Server...")
+    print("Starting SecureAttend Backend Server...")
     print("API will be available at: http://localhost:8000")
     print("API documentation at: http://localhost:8000/docs")
     print("\nPress CTRL+C to stop the server\n")

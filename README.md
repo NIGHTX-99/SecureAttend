@@ -1,4 +1,4 @@
-# PKI-Based QR Access Control and Attendance System
+# SecureAttend
 
 A Python-based system that uses Public Key Infrastructure (PKI) to provide passwordless authentication, secure classroom door access, and automatic attendance marking.
 
@@ -26,7 +26,7 @@ See [docs/architecture.md](docs/architecture.md) for detailed system architectur
 ```bash
 # Clone the repository
 git clone <repository-url>
-cd pki-qr-access-control
+cd SecureAttend
 
 # Install dependencies
 pip install -r requirements.txt
@@ -56,7 +56,7 @@ docker-compose up
 ### Repository Structure
 
 ```
-pki-qr-access-control/
+SecureAttend/
 ├── backend/          # Backend services (CA, auth, attendance, API)
 ├── client/           # Client application (QR, signing, UI)
 ├── docker/           # Dockerfiles

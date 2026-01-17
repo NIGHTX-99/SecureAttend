@@ -18,7 +18,7 @@ from backend.attendance.storage import AttendanceStorage
 def initialize_system():
     """Initialize the backend system with test data."""
     print("=" * 60)
-    print("Initializing PKI-Based QR Access Control Backend")
+    print("Initializing SecureAttend Backend")
     print("=" * 60)
 
     # Paths

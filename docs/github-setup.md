@@ -13,15 +13,15 @@ This project uses the following branch structure:
 ### 1. Create GitHub Repository
 
 1. Go to GitHub.com and create a new repository
-2. Name it: `pki-qr-access-control`
+2. Name it: `SecureAttend`
 3. **Do NOT** initialize with README, .gitignore, or license (we already have these)
-4. Copy the repository URL (e.g., `https://github.com/yourusername/pki-qr-access-control.git`)
+4. Copy the repository URL (e.g., `https://github.com/yourusername/SecureAttend.git`)
 
 ### 2. Add Remote and Push
 
 ```bash
 # Add remote repository
-git remote add origin https://github.com/yourusername/pki-qr-access-control.git
+git remote add origin https://github.com/yourusername/SecureAttend.git
 
 # Push all branches
 git push -u origin main

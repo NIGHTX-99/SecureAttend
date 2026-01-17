@@ -31,8 +31,8 @@ from backend.api.routes.attendance import router as attendance_router
 
 # Initialize FastAPI app
 app = FastAPI(
-    title="PKI-Based QR Access Control API",
-    description="Backend API for PKI-based access control and attendance system",
+    title="SecureAttend API",
+    description="Backend API for SecureAttend - PKI-based access control and attendance system",
     version="0.1.0",
 )
 
@@ -54,7 +54,7 @@ app.include_router(attendance_router, prefix="/api/attendance", tags=["attendanc
 async def root():
     """Root endpoint."""
     return {
-        "message": "PKI-Based QR Access Control API",
+        "message": "SecureAttend API",
         "version": "0.1.0",
         "status": "operational"
     }

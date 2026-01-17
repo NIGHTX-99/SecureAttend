@@ -99,7 +99,7 @@ python -m backend.ca.cli list-certs
 ### 3. Repository Structure
 
 ```
-pki-qr-access-control/
+SecureAttend/
 ├── backend/
 │   ├── __init__.py
 │   └── ca/

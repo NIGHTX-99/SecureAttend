@@ -9,7 +9,7 @@
 
 1. **Clone or navigate to the project directory**:
    ```bash
-   cd pki-qr-access-control
+   cd SecureAttend
    ```
 
 2. **Create a virtual environment (recommended)**:

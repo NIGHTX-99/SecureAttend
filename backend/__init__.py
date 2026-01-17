@@ -1,3 +1,3 @@
-"""PKI-Based QR Access Control System - Backend Package"""
+"""SecureAttend - Backend Package"""
 
 __version__ = "0.1.0"

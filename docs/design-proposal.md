@@ -1,4 +1,4 @@
-# PKI-Based QR Access Control and Attendance System
+# SecureAttend
 ## Technical Design Proposal
 
 ---
