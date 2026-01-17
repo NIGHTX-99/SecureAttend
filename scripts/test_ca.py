@@ -22,7 +22,11 @@ def test_ca_initialization():
     print("Test 1: CA Initialization")
     print("=" * 60)
     
-    ca_dir = Path("./test_data/ca")
+    # Ensure test_data directory exists
+    test_data_dir = Path("./test_data")
+    test_data_dir.mkdir(exist_ok=True)
+    
+    ca_dir = test_data_dir / "ca"
     ca_manager = CAManager(ca_dir)
     
     # Initialize CA
@@ -108,7 +112,8 @@ def test_certificate_revocation(ca_manager, student_serial):
     print("Test 4: Certificate Revocation")
     print("=" * 60)
     
-    crl_dir = Path("./test_data/crl")
+    test_data_dir = Path("./test_data")
+    crl_dir = test_data_dir / "crl"
     crl_manager = CRLManager(ca_manager, crl_dir)
     
     # Revoke student certificate
