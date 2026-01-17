@@ -30,8 +30,7 @@ jobs:
     
     - name: Run CA tests
       run: |
-        mkdir -p test_data
-        python scripts/test_ca.py || true
+        python scripts/test_ca.py
     
     - name: Run integration tests
       run: |

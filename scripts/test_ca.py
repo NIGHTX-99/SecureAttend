@@ -49,7 +49,8 @@ def test_student_certificate_issuance(ca_manager):
     print("Test 2: Student Certificate Issuance")
     print("=" * 60)
     
-    certs_dir = Path("./test_data/certs")
+    test_data_dir = Path("./test_data")
+    certs_dir = test_data_dir / "certs"
     issuer = CertificateIssuer(ca_manager, certs_dir)
     
     # Issue certificate to student
@@ -82,7 +83,8 @@ def test_door_certificate_issuance(ca_manager):
     print("Test 3: Door Certificate Issuance")
     print("=" * 60)
     
-    certs_dir = Path("./test_data/certs")
+    test_data_dir = Path("./test_data")
+    certs_dir = test_data_dir / "certs"
     issuer = CertificateIssuer(ca_manager, certs_dir)
     
     # Issue certificate to door
