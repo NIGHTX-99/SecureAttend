@@ -1,0 +1,19 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+# Python files
+*.py text eol=lf
+*.pyw text eol=lf
+
+# Text files
+*.txt text
+*.md text
+*.json text
+
+# Binary files
+*.pem binary
+*.key binary
+*.crt binary
+*.db binary
+*.sqlite binary
+*.sqlite3 binary
